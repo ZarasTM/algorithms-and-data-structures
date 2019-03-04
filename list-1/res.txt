@@ -1,0 +1,15 @@
+M=1, D=1, Best: TRANS
+  MTF =   492887
+  TRANS = 335870
+
+M=0, D=1, Best: MTF
+  MTF =   495199
+  TRANS = 497325
+
+M=1, D=0, Best: TRANS
+  MTF =   497738
+  TRANS = 338595
+
+M=0, D=0, Best: DRAW
+  MTF =   500050
+  TRANS = 500050
