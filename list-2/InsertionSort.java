@@ -13,6 +13,7 @@ public class InsertionSort extends MySort {
             while(inIdx >= 0){
                 super.comp(tab[inIdx], toInsert);
                 if(tab[inIdx] > toInsert){
+                    swap++;
                     tab[inIdx+1] = tab[inIdx];
                 }else{
                     break;
