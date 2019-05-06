@@ -1,7 +1,8 @@
 # Algorithms and data structures
 
 [List 1 (One way lists)](README.md#list-1)\
-[List 2 (Sorting algorithms)](README.md#list-2)
+[List 2 (Sorting algorithms)](README.md#list-2)\
+[List 3 (Priority Queues and Graph algorithms)](README.md#list-3)
 
 # List 1 
 **Implementation of one way list in C along with comparisons count**
@@ -18,3 +19,7 @@ Program should be run with additional parameters:
     2. Sorts them with every algorithm gathering data about number of comparisons and swaps between elements as well as time of execution. 
     3. Repeats steps 1-2 *n* times.
     4. Prints results to a given file.
+   
+# List-3
+**Implementation of priority queue as well as Dijkstra, Prim, Kruskal and strongly connected components finding algorithms**
+For instructions about running programs run it with **-h** or **--help** option
