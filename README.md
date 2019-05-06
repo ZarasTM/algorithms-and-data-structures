@@ -21,5 +21,5 @@ Program should be run with additional parameters:
     4. Prints results to a given file.
    
 # List-3
-**Implementation of priority queue as well as Dijkstra, Prim, Kruskal and strongly connected components finding algorithms**
+**Implementation of priority queue as well as Dijkstra, Prim, Kruskal and strongly connected components finding algorithms**\
 For instructions about running programs run it with **-h** or **--help** option
