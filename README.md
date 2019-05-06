@@ -1,3 +1,5 @@
+# Algorithms and data structures
+
 [List 1 (One way lists)](README.md#list-1)\
 [List 2 (Sorting algorithms)](README.md#list-2)
 
