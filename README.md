@@ -21,5 +21,15 @@ Program should be run with additional parameters:
     4. Prints results to a given file.
    
 # List 3
-**Implementation of priority queue as well as Dijkstra, Prim, Kruskal and strongly connected components finding algorithms**\
-For instructions about running programs run it with **-h** or **--help** option
+**Implementation of priority queue as well as 4 graph algorithms**\
+For help with running program add **-h** or **--help** option\
+\
+Pass one of the arguments to run program:
+* **-prior** - to run priority queue program
+* **-dijkstra** - to run dijkstra algorithm program
+* **-mst** - to run min spanning tree program
+    1. **-p** - to use Prim's algorithm
+    2. **-k** - to use Kruskal's algorithm
+* **-scc** - to run program finding strongly connected components in graph\
+\
+If you want to run test programs add **--test** or **-t** option
