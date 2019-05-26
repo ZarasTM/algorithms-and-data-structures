@@ -2,7 +2,8 @@
 
 [List 1 (One way lists)](README.md#list-1)\
 [List 2 (Sorting algorithms)](README.md#list-2)\
-[List 3 (Priority Queues and Graph algorithms)](README.md#list-3)
+[List 3 (Priority Queues and Graph algorithms)](README.md#list-3)\
+[List 4 (Binary tree data structures)](README.md#list-4)
 
 # List 1 
 **Implementation of one way list in C along with comparisons count**
@@ -33,3 +34,25 @@ Pass one of the arguments to run program:
 * **-scc** - to run program finding strongly connected components in graph\
 \
 If you want to run test programs add **--test** or **-t** option
+
+# List 4
+**Implementation of tree data structures (Binary tree, Red-Black tree, Splay tree)**\
+Program should be run with **./a.out --type \<t>** command\
+\
+Run with **t** defined as one of the options:
+* **bst** - to run for binary search tree
+* **rbt** - to run for red-black tree
+* **splay** - to run for splay tree
+\
+*(Default value for t is rbt)*
+\
+\
+As the input you can pass one of the arguments:
+* **insert s** - to insert string **s** to the structure
+* **delete s** - to delete string **s** from the structure
+* **search s** - to search for the string **s** in the structure *(returns true or false depending on results)*
+* **load path** - to load file **path** to a structure
+* **inorder** - to print contents of the structure in order
+\
+\
+*Times for the structure can be incorrect. To be fixed*
