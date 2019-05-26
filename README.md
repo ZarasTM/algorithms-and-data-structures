@@ -51,7 +51,7 @@ As the input you can pass one of the arguments:
 * **insert s** - to insert string **s** to the structure
 * **delete s** - to delete string **s** from the structure
 * **search s** - to search for the string **s** in the structure *(returns true or false depending on results)*
-* **load path** - to load file **path** to a structure
+* **load f** - to load every string divided by white sign from a file **f** to a structure
 * **inorder** - to print contents of the structure in order
 \
 \
