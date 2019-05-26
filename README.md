@@ -37,7 +37,7 @@ If you want to run test programs add **--test** or **-t** option
 
 # List 4
 **Implementation of tree data structures (Binary tree, Red-Black tree, Splay tree)**\
-Program should be run with **./a.out --type \<t>** command\
+Program should be run with **java Main --type \<t>** command\
 \
 Run with **t** defined as one of the options:
 * **bst** - to run for binary search tree
@@ -55,4 +55,4 @@ As the input you can pass one of the arguments:
 * **inorder** - to print contents of the structure in order
 \
 \
-*Times for the structure can be incorrect. To be fixed*
+*Times for the structures could be incorrect. To be fixed*
