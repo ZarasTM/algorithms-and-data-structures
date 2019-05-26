@@ -88,41 +88,72 @@ public class Main {
             }
 
             Scanner scan = new Scanner(System.in);
-            String[] line;
+            String line;
 
             System.err.print("Enter number of commands: ");
             for(int count = scan.nextInt(); count > 0; count--){
-                line = scan.nextLine().split(" ");
-                if(line[0].equals("insert")){
+                line = scan.next();
+                if(line.equals("insert")){
                     insertCount++;
                     tic = System.currentTimeMillis();
-                    tree.insert(line[1]);
+                    tree.insert(scan.next());
                     insertTime += System.currentTimeMillis() - tic;
-                }else if(line[0].equals("delete")){
+                }else if(line.equals("delete")){
                     deleteCount++;
                     tic = System.currentTimeMillis();
-                    tree.delete(line[1]);
+                    tree.delete(scan.next());
                     deleteTime += System.currentTimeMillis() - tic;
-                }else if(line[0].equals("search")){
+                }else if(line.equals("search")){
                     searchCount++;
                     tic = System.currentTimeMillis();
-                    System.out.println(tree.search(line[1]));
+                    System.out.println(tree.search(scan.next()));
                     searchTime += System.currentTimeMillis() - tic;
-                }else if(line[0].equals("inorder")){
+                }else if(line.equals("inorder")){
                     inorderCount++;
                     tic = System.currentTimeMillis();
                     tree.inOrder();
                     inorderTime += System.currentTimeMillis() - tic;
-                }else if(line[0].equals("load")){
-                    List<String> wordList = load(line[1]);
+                }else if(line.equals("load")){
+                    List<String> wordList = load(scan.next());
+
                     for(String word : wordList){
                         insertCount++;
                         tic = System.currentTimeMillis();
                         tree.insert(word);
-                        inorderTime += System.currentTimeMillis() - tic;
+                        insertTime += System.currentTimeMillis() - tic;
                     }
+                }else if(line.equals("test")){
+                    List<String> wordList = load(scan.next());
+
+                    System.err.println("Inserting...\t size: "+tree.getSize());
+                    for(String word : wordList){
+                        insertCount++;
+                        tic = System.currentTimeMillis();
+                        tree.insert(word);
+                        insertTime += System.currentTimeMillis() - tic;
+                    }
+
+                    Collections.shuffle(wordList);
+                    System.err.println("Searching...\t size: "+tree.getSize());
+                    for(String word : wordList){
+                        searchCount++;
+                        tic = System.currentTimeMillis();
+                        if(!tree.search(word)) System.err.println(word);
+                        searchTime += System.currentTimeMillis() - tic;
+                        //System.err.println(word);
+                    }
+
+                    Collections.shuffle(wordList);
+                    System.err.println("Deleting... \t size: "+tree.getSize());
+                    for(String word : wordList){
+                        deleteCount++;
+                        tic = System.currentTimeMillis();
+                        tree.delete(word);
+                        deleteTime += System.currentTimeMillis() - tic;
+                    }
+                    System.err.println("............\t size: "+tree.getSize());
                 }else{
-                    throw new Exception("Error: Unknown operation\""+line[0]+"\"");
+                    throw new Exception("Error: Unknown operation\""+line+"\"");
                 }
             }
         }else{
@@ -134,7 +165,6 @@ public class Main {
                 "\nComp: "+tree.getComp()+
                 "\nInsert: "+insertCount+"\t"+insertTime+"ms"+
                 "\nDelete: "+deleteCount+"\t"+deleteTime+"ms"+
-                "\nSearch: "+searchCount+"\t"+searchTime+"ms"+
-                "\nInOrder: "+inorderCount+"\t"+inorderTime+"ms");
+                "\nSearch: "+searchCount+"\t"+searchTime+"ms");
     }
 }
