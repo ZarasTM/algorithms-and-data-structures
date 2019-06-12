@@ -51,27 +51,6 @@ public class QuickSort extends MySort {
     }
 
     protected int partitionAsc(int tab[], int start, int end) {
-        /*
-        int i = start - 1;
-        int j = end + 1;
-        int median = getMedian(tab, start, end);
-        int piv = tab[median];
-
-        // Get median in the middle
-        if(median == start) swap(tab, start, (start+end)/2);
-        else if(median == end) swap(tab, end, (start+end)/2);
-
-        while(true) {
-            while (tab[++i] < piv);
-            while (tab[--j] > piv);
-
-            if (i >= j) break;
-
-            swap(tab, i, j);
-        }
-        return j;
-        */
-
         int i = start-1;
         int median = getMedian(tab, start, end);
         int piv = tab[median];
@@ -93,28 +72,7 @@ public class QuickSort extends MySort {
         return i+1;
     }
 
-    protected int partitionDesc(int tab[], int start, int end) {
-        /*
-        int i = start - 1;
-        int j = end + 1;
-
-        int median = getMedian(tab, start, end);
-        int piv = tab[median];
-
-        // Get median in the middle
-        if(median == start) swap(tab, start, (start+end)/2);
-        else if(median == end) swap(tab, end, (start+end)/2);
-
-        while(true) {
-            while (tab[++i] > piv);
-            while (tab[--j] < piv);
-
-            if (i >= j) break;
-
-            swap(tab, i, j);
-        }
-        return j;
-        */
+    protected int partitionDesc(int tab[], int start, int end) {s
 
         int i = start-1;
         int median = getMedian(tab, start, end);
