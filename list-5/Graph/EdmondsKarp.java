@@ -6,10 +6,8 @@ import java.util.Queue;
 import static java.lang.Math.min;
 
 public class EdmondsKarp {
-    // To avoid overflow, set infinity to a value less than Long.MAX_VALUE;
-    private static final long INF = Integer.MAX_VALUE / 2;
+    private static final long INF = Long.MAX_VALUE / 2;
 
-    // Inputs: nodeNum = number of nodes, source = source, t = sink
     private final int nodeNum;
     private final int source;
     private final int t;
@@ -68,12 +66,11 @@ public class EdmondsKarp {
     private long bfs() {
         Edge[] prev = new Edge[nodeNum];
 
-        // The queue can be optimized to use a faster queue
         Queue<Integer> q = new ArrayDeque<>(nodeNum);
         visit(source);
         q.offer(source);
 
-        // Perform BFS from source to sink
+        // Perform BFS
         while (!q.isEmpty()) {
             int node = q.poll();
             if (node == t) break;
@@ -87,21 +84,20 @@ public class EdmondsKarp {
             }
         }
 
-        // Sink not reachable
+        // If sink is not reachable
         if (prev[t] == null) return 0;
 
         long bottleNeck = INF;
         augPaths++;
 
-        // Find augmented path and bottle neck
+        // Find augmented path and bottle neck value
         for (Edge edge = prev[t]; edge != null; edge = prev[edge.getStart().getIntLabel()])
             bottleNeck = min(bottleNeck, edge.remainingCapacity());
 
-        // Retrace augmented path and update flow values.
+        //Update flow values.
         for (Edge edge = prev[t]; edge != null; edge = prev[edge.getStart().getIntLabel()])
             edge.augment(bottleNeck);
 
-        // Return bottleneck flow
         return bottleNeck;
     }
 
