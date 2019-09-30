@@ -4,7 +4,8 @@
 [List 2 (Sorting algorithms)](README.md#list-2)\
 [List 3 (Priority Queues and Graph algorithms)](README.md#list-3)\
 [List 4 (Binary tree data structures)](README.md#list-4)\
-[List 5 (Maximum flow and Maximal matching)](README.md#list-5)
+[List 5 (Maximum flow and Maximal matching)](README.md#list-5)\
+[Other](README.md#other)
 
 # List 1 
 **Implementation of one way list in C along with comparisons count**
@@ -63,3 +64,7 @@ As the input you can pass one of the arguments:
 Program should be run with **java Main --size \<k>** command to calculate maximum flow in **k**-dimentional hypercube.\
 \
 Run with additional argument **--degree \<i>** to calculate maximal matching for bipatite graph where every "side" has **2^k** nodes and every node has **i** random connections to other side. 
+
+# Other
+**Other implementations I did**
+* Dynamic Array implemented in RPGLE
